@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 // ensures that env variables are loaded
 const envFound = dotenv.config();
@@ -8,7 +8,7 @@ if (!envFound) {
 }
 console.log(process.env.PORT)
 // exports env variables for use
-export default {
+module.exports = {
   mysql: {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
